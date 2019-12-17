@@ -4,23 +4,36 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '代码风格', link: '/style/' },
+      { text: '规范', link: '/standard/' },
+      { text: '部署', link: '/deploy/' },
     ],
     sidebar: {
-      '/style/': [
+      '/standard/': [
+        {
+          title: '起步',
+          collapsable: false,
+          children: ['']
+        },
         {
           title: '代码风格',
           collapsable: false,
           children: [
-            '', 'html', 'css', 'js', 'vue'
+            'html', 'css', 'js', 'vue'
           ]
         },
         {
           title: '项目开发',
           collapsable: false,
           children: [
-            'document', 'tool', 'version', 'dependencies'
+            'document', 'tool', 'version', 'dependency'
           ]
+        }
+      ],
+      '/deploy/': [
+        {
+          title: '部署',
+          collapsable: false,
+          children: ['', 'nginx']
         }
       ]
     }
