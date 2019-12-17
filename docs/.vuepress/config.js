@@ -12,7 +12,14 @@ module.exports = {
           title: '代码风格',
           collapsable: false,
           children: [
-            'css', 'js'
+            '', 'html', 'css', 'js', 'vue'
+          ]
+        },
+        {
+          title: '项目开发',
+          collapsable: false,
+          children: [
+            'document', 'tool', 'version', 'dependencies'
           ]
         }
       ]
