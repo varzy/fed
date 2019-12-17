@@ -26,7 +26,7 @@
 - 数组类型的变量 **必须** 采用复数形式的名词。如: `users`, `categories`
 - 对于单复同行的数组型变量，**应该** 添加其它的单词进行辅助释义。如: `newsList`
 - 对象类型的变量 **必须** 采用单数形式的名词。如: `user`
-- 函数 (方法) 命名 **必须** 是以动词开头的 `camelCase` 风格。如: `createUser`, `validator`
+- 函数 (方法) 命名 **必须** 是以动词开头的 `camelCase` 风格。如: `createUser`, `validateForm`
 - 对于项目中约定的常量 (如配置项等)，**应该** 使用 `PASCAL_CASE` 风格。如: `HEADER_MENU`, `PRIMARY_COLOR`
 - 类的名称 **必须** 采用 `PascalCase` 形式，且 **应该** 拟人化。如: `Permission`, `FormValidator`
 - 任何变量的命名都 **不应该** 过于生僻和抽象
@@ -37,12 +37,14 @@
 - `go`: 跳转、前往
 - `get` / `fetch`: 拉取某些事物
 - `set`: 置放某些事物
-- `make` / `create`: 得到另一种事物
+- `make` / `create`: 创建
+- `edit` / `update`: 编辑
+- `delete` / `destroy`: 删除
 - `handle`: 被其它操作触发了
 
 ## Restful Actions
 
-对于项目中的接口，**应该** 将 ajax 请求拆分为请求函数以实现复用，并且提高可维护性。如果接口使用 Restful Api，那么前端对应的方法名 **可以** 按照下面的规范进行命名:
+对于项目中的接口，**应该** 将 ajax 请求拆分为请求函数以实现复用以及提高项目的可维护性。如果接口使用 Restful Api，那么前端对应的方法名 **可以** 按照下面的规范进行命名:
 
 - `get` `/books` => `reqFetchBooks`
 - `get` `/books/:id` => `reqShowBook`
@@ -76,8 +78,7 @@ newsList.map(news => { });
 if (a === 1) { }
 
 // good
-if (a === 1) { }
-else { }
+if (a === 1) { } else { }
 ```
 
 部分 `if else` 逻辑 **可以** 通过及时 `return` 减少嵌套层数。

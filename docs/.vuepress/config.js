@@ -3,7 +3,6 @@ module.exports = {
   description: 'Docs of unidata fe group.',
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
       { text: '规范', link: '/standard/' },
       { text: '部署', link: '/deploy/' },
     ],
@@ -17,16 +16,12 @@ module.exports = {
         {
           title: '代码风格',
           collapsable: false,
-          children: [
-            'html', 'css', 'js', 'vue'
-          ]
+          children: ['html', 'css', 'js', 'vue']
         },
         {
           title: '项目开发',
           collapsable: false,
-          children: [
-            'document', 'tool', 'version', 'dependency'
-          ]
+          children: ['document', 'tool', 'version', 'dependency', 'git', 'editorconfig', `prettier`]
         }
       ],
       '/deploy/': [

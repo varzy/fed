@@ -10,22 +10,23 @@
 
 - 页面、路由相关的组件 **应该** 使用一个单词命名
 - 非页面、路由相关的组件 **应该** 使用 `PascalCase` 风格命名
+- 组件命名 **应该** 拟人化。如: `UserCreator`, `Selector`
 
 ## 文件引入
 
 如果文件夹内拥有 `index.vue`，那么引入时 **应该** 省略 index 字样，并在末尾添加 `/`。
 
-``` javascript
+``` js
 // ok
-import FolderName from './folder-name/index'
+import MyComponent from './folder-name/index'
 
 // good
-import FolderName from './folder-name/'
+import MyComponent from './folder-name/'
 ```
 
 引入组件时，模块名 **必须** 为 PascalCase。
 
-``` javascript
+``` js
 // bad
 import myComponent from 'MyComponent'
 
@@ -102,7 +103,7 @@ vue 文件中的标签书写顺序 **必须** 为:
 
 各个选项间必须间隔一个空行，而选项内部的值或方法不空行。
 
-``` javascript
+``` js
 export default {
   name: 'Demo',
 
@@ -126,9 +127,9 @@ export default {
 
 ### 实例选项: name
 
-每一个组件 **必须** 有一个 `name` 实例选项，其值 **应该** 为被其他组件引入时的模块名。如果你的组件命名完全遵守本规范，那么一般情况下，此属性的值应为与组件的文件名保持一致。
+每一个组件 **必须** 有一个 `name` 实例选项，其值 **必须** 为被其他组件引入时的模块名。如果你的组件命名完全遵守本规范，那么一般情况下，此属性的值应为与组件的文件名保持一致。
 
-``` javascript
+``` js
 /**
  * file name: MyComponent
  */
@@ -156,7 +157,7 @@ import MyComponent from '../common/MyComponent'
 
 组件需要的参数，都 **应该** 拥有完善的验证规则。
 
-``` javascript
+``` js
 export default: {
   props: {
     demo: {
