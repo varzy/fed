@@ -21,7 +21,7 @@ module.exports = {
         {
           title: '项目开发',
           collapsable: false,
-          children: ['document', 'tool', 'version', 'dependency', 'git', 'editorconfig', `prettier`]
+          children: ['document', 'tool', 'version', 'dependency', 'git', 'editorconfig', `prettier`, 'cli']
         }
       ],
       '/deploy/': [
