@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/fed/',
   title: 'Unidata FED',
   description: 'Docs of unidata fe group.',
   themeConfig: {
@@ -21,7 +22,7 @@ module.exports = {
         {
           title: '项目开发',
           collapsable: false,
-          children: ['document', 'tool', 'version', 'dependency', 'git', 'editorconfig', `prettier`, 'cli']
+          children: ['document', 'tool', 'version', 'dependency', 'git', 'vuecli', 'editorconfig', `prettier`, 'communication']
         }
       ],
       '/deploy/': [
