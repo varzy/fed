@@ -16,7 +16,7 @@ git config --global core.safecrlf true
 
 ## 分支命名
 
-- 开发分支必须是 `develop`
+- 开发分支 **必须** 是 `develop`
 - 功能分支 **必须** 以 `feature/` 开头。如: `feature/user_system`
 - 开发完毕，但仍需维护的版本 **必须** 检出一条新的分支，并以 `stable/` 开头。如: `stable/v1`
 

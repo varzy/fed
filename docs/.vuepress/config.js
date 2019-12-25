@@ -5,6 +5,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '规范', link: '/standard/' },
+      { text: '最佳实践', link: '/practice/compatibility' },
       { text: '部署', link: '/deploy/' },
     ],
     sidebar: {
@@ -25,11 +26,18 @@ module.exports = {
           children: ['document', 'tool', 'version', 'dependency', 'git', 'vuecli', 'editorconfig', `prettier`, 'communication']
         }
       ],
+      '/practice/': [
+        {
+          title: '最佳实践',
+          collapsable: false,
+          children: ['compatibility', 'scss-resources', 'css-building', 'webpack-bundle-analyzer']
+        }
+      ],
       '/deploy/': [
         {
           title: '部署',
           collapsable: false,
-          children: ['', 'nginx']
+          children: ['nginx']
         }
       ]
     }
