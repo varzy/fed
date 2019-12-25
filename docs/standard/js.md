@@ -2,7 +2,7 @@
 
 ## 浏览器兼容性
 
-项目 **必须** 至少兼容 Chrome, Firefox 以及 ie10+。
+项目 **必须** 至少兼容 Chrome, Firefox 以及 ie10+。详见: [兼容 IE 及 Edge 浏览器](../practice/compatibility.md)
 
 ## Babel
 

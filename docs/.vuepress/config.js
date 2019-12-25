@@ -5,7 +5,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '规范', link: '/standard/' },
-      { text: '最佳实践', link: '/practice/compatibility' },
+      { text: '最佳实践', link: '/practice/' },
       { text: '部署', link: '/deploy/' },
     ],
     sidebar: {
@@ -28,16 +28,26 @@ module.exports = {
       ],
       '/practice/': [
         {
-          title: '最佳实践',
+          title: '关于',
+          collapsable: false,
+          children: ['']
+        },
+        {
+          title: '落地',
           collapsable: false,
           children: ['compatibility', 'scss-resources', 'css-building', 'webpack-bundle-analyzer']
+        },
+        {
+          title: '玄学',
+          collapsable: false,
+          children: ['high-cohesion-and-low-coupling']
         }
       ],
       '/deploy/': [
         {
           title: '部署',
           collapsable: false,
-          children: ['nginx']
+          children: ['', 'nginx']
         }
       ]
     }
