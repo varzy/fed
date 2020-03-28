@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "lint": "prettier --write ./docs/.vuepress/config.js --single-quote",
+    "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "vuepress": "^1.2.0"
