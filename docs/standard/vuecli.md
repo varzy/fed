@@ -34,7 +34,59 @@
 
 由于样式存在后者覆盖前者的问题，因此 main.scss **必须** 按照一定的顺序进行组织。
 
-详见 [样式资源组织](../practice/css-building.md)。
+```scss
+// 网络资源 (network resources)
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// 本地资源 (local resources)。如: 变量，mixin，图标
+@import "variables";
+@import "mixins";
+@import "iconfont";
+
+// 样式重置 (reset)。推荐优先使用 normalize.css，自己书写的 reset 文件的内容应当尽可能少
+@import "~normalize.css/normalize.css";
+@import "reset";
+
+// 第三方库 (libraries)
+@import "~element-ui/packages/theme-chalk/src/index";
+@import "~swiper/css/swiper";
+
+// 公共样式 (common)。如果有需要的话，给公共样式加入一个前缀以作区分，如 `g-container`
+@import "common";
+
+// 视图 (views)。对于一个 vue 项目，可能不需要引入视图内的样式
+@import "views/layouts/home";
+@import "views/widgets/header";
+@import "views/index";
+
+// 强行重置某些样式 (hack)。内容应当尽可能少
+@import "hack";
+```
+
+## Scss 全局资源
+
+> 参考官方文档: <https://cli.vuejs.org/zh/guide/css.html#%E5%90%91%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-loader-%E4%BC%A0%E9%80%92%E9%80%89%E9%A1%B9>
+
+在 `src/styles/` 目录下创建 `resources.scss` 文件，用于存放全局可以使用的样式资源，如变量、mixin 等。
+
+```scss
+@import "variables";
+@import "mixins";
+```
+
+在 `vue.config.js` 中进行配置
+
+```js
+module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/styles/resources.scss";`
+      }
+    }
+  },
+}
+```
 
 ## 环境变量
 

@@ -1,12 +1,12 @@
 module.exports = {
   base: '/fed/',
   title: 'ZY FED',
-  description: 'FE Docs of Aiden Zhao.',
+  description: '我正在践行的，用于自我约束的前端编码规范。',
   themeConfig: {
     nav: [
       { text: '规范', link: '/standard/' },
-      { text: '最佳实践', link: '/practice/' },
-      // { text: '部署', link: '/deploy/' },
+      { text: 'Github', link: 'https://github.com/varzy/fed', target: '_blank' },
+      { text: '我', link: 'https://varzy.me', target: '_blank' },
     ],
     sidebar: {
       '/standard/': [
@@ -35,36 +35,7 @@ module.exports = {
             'communication',
           ],
         },
-      ],
-      '/practice/': [
-        {
-          title: '关于',
-          collapsable: false,
-          children: [''],
-        },
-        {
-          title: '落地',
-          collapsable: false,
-          children: [
-            // 'compatibility',
-            'scss-resources',
-            'css-building',
-            // 'webpack-bundle-analyzer',
-          ],
-        },
-        // {
-        //   title: '玄学',
-        //   collapsable: false,
-        //   children: ['high-cohesion-and-low-coupling'],
-        // },
-      ],
-      // '/deploy/': [
-      //   {
-      //     title: '部署',
-      //     collapsable: false,
-      //     children: ['', 'nginx'],
-      //   },
-      // ],
+      ]
     },
   },
 };

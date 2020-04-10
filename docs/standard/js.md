@@ -1,9 +1,5 @@
 # JS (ES) 规范
 
-## 浏览器兼容性
-
-项目 **必须** 至少兼容 Chrome, Firefox 以及 ie10+。详见: [兼容 IE 及 Edge 浏览器](../practice/compatibility.md)
-
 ## Babel
 
 首先感谢 Babel 为世界上千千万万个前端程序员做出的贡献。
@@ -35,8 +31,8 @@
 
 - `do` / `deal`: 做某些事情
 - `go`: 跳转、前往
-- `get` / `fetch`: 拉取某些事物
-- `set`: 置放某些事物
+- `get` / `fetch`: 获取某些事物
+- `set`: 设置某些事物
 - `make` / `create`: 创建
 - `edit` / `update`: 编辑
 - `delete` / `destroy`: 删除
@@ -67,7 +63,7 @@ newsList.map(news => { });
 
 ## 异步的处理
 
-**必须** 使用 `async`, `await` 和 `try catch` 来处理异步操作。
+**应该** 使用 `async`, `await` 和 `try catch` 来处理异步操作，这比 Promise 的链式操作更加易读。
 
 ## if 的处理
 
